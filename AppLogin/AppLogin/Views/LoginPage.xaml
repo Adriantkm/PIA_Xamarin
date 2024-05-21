@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.Views.LoginPage"
+             Title="Login" BackgroundColor="#7528BA">
+    
+    <StackLayout VerticalOptions="Center">
+        <Image
+            x:Name="logo"
+        Source="icon.png"
+        Aspect="AspectFit"/>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Ingresar Datos" TextColor="LimeGreen" FontSize="25" FontAttributes="Bold"></Label>
+        </StackLayout>
+        <StackLayout Margin="50,0,50,0">
+            <Frame>
+                <StackLayout>
+                    <Entry Placeholder="Usuario" PlaceholderColor="#F1BB05" x:Name="txtemail" Text="{Binding txtemail}" TextColor="#DCB349ff"></Entry>
+                    <Entry Placeholder="Password" PlaceholderColor="#F1BB05" x:Name="txtpassword" Text="{Binding txtpassword}" TextColor="#DCB349ff" IsPassword="True"></Entry>
+                    <Button Text="Ingresar" FontSize="20" x:Name="btnLogin" Command="{Binding LoginCommand}" BackgroundColor="LightSalmon" TextColor="White" CornerRadius="10"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

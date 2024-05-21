@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.Views.MainMenu"
+             Title="Pouplication">
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center"
+        Padding="30,0"
+        Spacing="25">
+            <Image
+            Source="icon.png"
+            HeightRequest="185"
+            Aspect="AspectFit"/>
+
+            <Label
+            Text="Bienvenido Robloxiano"/>
+
+            <Label
+            Text="Toma fotos de la INE e Ingresa el usuario para activarlo"/>
+
+            <Entry Placeholder="USUARIO" x:Name="usuario"></Entry>
+
+            <FlexLayout Direction="Row">
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                <CheckBox x:Name="cbDocumento"></CheckBox>
+                <Label Text="Documento extra"></Label>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="End" Margin="15">
+                <CheckBox x:Name="cbActivar"></CheckBox>
+                <Label Text="Activar por cedula"></Label>
+            </StackLayout>
+            </FlexLayout>
+            
+            <Button Text="Tomar Foto" Clicked="Btn_Fotos"/>
+            <Button Text="Obtener Galeria" Clicked="Galeria" IsVisible="false"/>
+            <Button Text="Activar" Clicked="Btn_Activar"/>
+
+       
+
+
+            <StackLayout x:Name="imgsFotos" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
